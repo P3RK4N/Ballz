@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Fish 1
+  m_Shader: {fileID: -6465566751694194690, guid: cccc0b3c990536643b898d907e9f37b4, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_9652efb7a22b4e719672d119d7f870b9: 0.02
+    - Vector1_bd7b9bdc2f60477aa7ef7983641afe85: 5.11
+    - Vector1_f4d4c1daf1bd403aa1be11da5405a304: 6.03
+    m_Colors:
+    - Color_401c2718bda0408ea0ddf2fbc9a1ed5f: {r: 0.8018868, g: 0.3215112, b: 0.3215112, a: 0}
+    - Color_bbfcf448e7494433985c1d1b0dc82b50: {r: 1, g: 0, b: 0.8365736, a: 0}
+  m_BuildTextureStacks: []

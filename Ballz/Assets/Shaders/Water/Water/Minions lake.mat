@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Minions lake
+  m_Shader: {fileID: -6465566751694194690, guid: 138bbb9f6af28054082750673c999d1b, type: 3}
+  m_ShaderKeywords: _RECEIVE_SHADOWS_OFF
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_37AAFE25:
+        m_Texture: {fileID: 2800000, guid: 800ad5614fcc7f949b9b917b5e0295e0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_B66AF0E1:
+        m_Texture: {fileID: 2800000, guid: e8eb1a1f5381bb9479e896016b9bab01, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_1732846b40dd4a5290d192ff5d3c04d2: 404.6
+    - Vector1_2E11270D: 0.08
+    - Vector1_39D35881: 1
+    - Vector1_3B48FD24: 0.14
+    - Vector1_5AE4170F: -0.1
+    - Vector1_80CAEB23: 0.33
+    - Vector1_8E5091B8: -0.33
+    - Vector1_981A3A67: 0
+    - Vector1_C1C7D298: 0.747
+    - Vector1_ECB3F2B8: 0.4
+    - Vector1_e6cd40566dbc4fdbb3b6a84852ee46ec: 1
+    m_Colors:
+    - Color_27D4D743: {r: 0, g: 0.6509434, b: 0.42997172, a: 0}
+    - Color_51A4B6EC: {r: 1, g: 1, b: 1, a: 0}
+    - Color_C347D0B: {r: 1, g: 1, b: 1, a: 0}
+  m_BuildTextureStacks: []
