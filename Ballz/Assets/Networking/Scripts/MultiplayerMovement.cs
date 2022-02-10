@@ -15,6 +15,8 @@ public class MultiplayerMovement : MonoBehaviour
     [SerializeField] KeyCode right;
 
     public Vector3 currentDirection = new Vector3(0f,0f,0f);
+    public float resistanceFactor = 5f;
+    float damage = 0f;
 
     Rigidbody rb;
     Transform cameraTransform;
@@ -56,16 +58,19 @@ public class MultiplayerMovement : MonoBehaviour
         {
             //otpor zraka
             //b*maxspeed3=moveForce*delta*10
-            float resistanceFactor = moveForce*Time.deltaTime*5/Mathf.Pow(maxSpeed,2);
+            float resistance = moveForce*Time.deltaTime*resistanceFactor/Mathf.Pow(maxSpeed,2);
             // rb.AddForce(-move.normalized * resistanceFactor * move.magnitude);
-            rb.AddForce(-resistanceFactor*move.normalized*move.magnitude*move.magnitude);
+            rb.AddForce(-resistance*move.normalized*move.magnitude*move.magnitude);
         }
     }
 
     //Kretanje u odnosu na vektor kamera-player
     private void move()
     {
-            Vector3 straight = cameraTransform.position - transform.position;
+            //Reference system for movement
+            // Vector3 straight = cameraTransform.position - transform.position;
+            Vector3 straight = -cameraTransform.forward;
+
             Vector2 perpendicular2D = Vector2.Perpendicular(new Vector2(straight.x,straight.z));
             Vector3 perpendicular = new Vector3(perpendicular2D.x,0,perpendicular2D.y);
 
@@ -91,4 +96,14 @@ public class MultiplayerMovement : MonoBehaviour
             rb.AddForce(direction * calculateTotalForce());
     }
 
+    public void recalculateResistanceFactor()
+    {
+        resistanceFactor = Mathf.Lerp(5f,3f, (1-rb.mass) / 0.8f);
+    }
+
+    public void increaseDamage(float dmg)
+    {
+        damage += dmg;
+        rb.mass = Mathf.Exp(-0.1f*damage);
+    }
 }

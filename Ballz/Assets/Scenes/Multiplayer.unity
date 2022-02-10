@@ -200,7 +200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8991425118970385022, guid: 949a83a28f4a48145a7a91fe013f97e5, type: 3}
       propertyPath: m_Name
-      value: Player (1)
+      value: Strelice
       objectReference: {fileID: 0}
     - target: {fileID: 8991425119472531193, guid: 949a83a28f4a48145a7a91fe013f97e5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5705ff4489374c4baad485614c52774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentVelocity: 0
+  currentVelocity: {x: 0, y: 0, z: 0}
 --- !u!1 &1663489580 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1542528335886117758, guid: 949a83a28f4a48145a7a91fe013f97e5, type: 3}
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5705ff4489374c4baad485614c52774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentVelocity: 0
+  currentVelocity: {x: 0, y: 0, z: 0}
 --- !u!1 &1706297292
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,7 +613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8991425118970385022, guid: 949a83a28f4a48145a7a91fe013f97e5, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: WASD
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 949a83a28f4a48145a7a91fe013f97e5, type: 3}

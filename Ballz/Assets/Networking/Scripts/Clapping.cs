@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Clapping : MonoBehaviour
 {
-    public float currentVelocity;
+    public static float damageFactor = 100f;
+
     Rigidbody rb;
-    public static float damage = 10f;
+
+    public Vector3 currentVelocity;
 
     void Start()
     {
@@ -15,19 +17,31 @@ public class Clapping : MonoBehaviour
 
     void Update()
     {
+
     }
 
     private void OnCollisionEnter(Collision other) 
     {
         if(other.gameObject.tag != "Player") return;
-        float otherVelocity = other.gameObject.GetComponent<Clapping>().currentVelocity;
-        float force = Vector3.Dot(other.GetContact(0).normal,other.relativeVelocity);
-        float damageFactor = force / damage;
-        Debug.Log(transform.parent.name + ": " + currentVelocity + " " + other.transform.parent.name + ": " + otherVelocity + " " + damageFactor);
+
+        //Getting vector of collision
+        Vector3 impactNormal = -other.GetContact(0).normal;
+
+        //Getting relative speed before hit
+        float myRelativeSpeed = Mathf.Max(0,Vector3.Dot(currentVelocity, impactNormal));
+        float otherRelativeSpeed = Mathf.Max(0,Vector3.Dot(other.transform.GetComponent<Clapping>().currentVelocity, -impactNormal));
+
+        //Calculating damage done to enemy
+        float totalRelativeSpeed = myRelativeSpeed + otherRelativeSpeed;
+        float dmgPercent = myRelativeSpeed / totalRelativeSpeed;
+
+        float force = other.impulse.magnitude / Time.fixedDeltaTime;
+        float enemyDamage = force / damageFactor * dmgPercent;
+        other.transform.GetComponentInParent<PlayerStats>().damagePlayer(enemyDamage);
     }
 
     void FixedUpdate() 
     {
-        currentVelocity = rb.velocity.magnitude;
+        currentVelocity = rb.velocity;
     }
 }

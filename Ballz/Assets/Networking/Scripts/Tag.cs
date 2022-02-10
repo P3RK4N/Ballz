@@ -4,15 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-[ExecuteAlways]
 public class Tag : MonoBehaviour
 {
-    MultiplayerMovement ball;
     [SerializeField] TMPro.TMP_Text tm;
 
     private void Start() 
     {
-        ball = transform.parent.GetComponentInChildren<MultiplayerMovement>();  
     }
 
     void Update()
@@ -23,13 +20,13 @@ public class Tag : MonoBehaviour
 
     private void updateTag()
     {
-        float mass = ball.GetComponent<Rigidbody>().mass;
-        tm.text = "Mass: " + (int)(mass * 100);
+        float mass = transform.parent.GetComponent<PlayerStats>().mass;
+        tm.text = "Mass: " + $"{mass:0.00}";
     }
 
    private void transformTag()
     {
-        transform.position = ball.transform.position + new Vector3(0,0.4f,0);
+        transform.position = transform.parent.GetComponentInChildren<MultiplayerMovement>().transform.position + new Vector3(0,0.4f,0);
         transform.LookAt(FindObjectOfType<Camera>().transform.position);
     }
 }

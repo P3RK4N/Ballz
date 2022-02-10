@@ -9,7 +9,8 @@ public class MultiplayerSkills : MonoBehaviour
 
     //JUMP
     [Header("#1 - Jump skill")]
-    [SerializeField] float jumpTimer = 1.5f;
+    [SerializeField] float jumpTimer = 1f;
+    bool onFloor = true;
     float currentJumpTime = 0f;
     [SerializeField] float jumpForce = 200f;
     [SerializeField] KeyCode jumpButton = KeyCode.Space;
@@ -40,7 +41,7 @@ public class MultiplayerSkills : MonoBehaviour
        if(Input.GetKey(thrustButton) && currentThrustTime < 0)
        {
             Vector3 direction = new Vector3(GetComponent<MultiplayerMovement>().currentDirection.x, 0, GetComponent<MultiplayerMovement>().currentDirection.z).normalized;
-            rb.AddForce(direction * thrustForce);
+            rb.AddForce(direction * thrustForce * rb.mass);
             currentThrustTime = thrustTimer;
        }
        else 
@@ -51,10 +52,11 @@ public class MultiplayerSkills : MonoBehaviour
 
    private void jump()
     {
-        if(currentJumpTime > 0) currentJumpTime -= Time.deltaTime;
+        if (!onFloor) onFloor = GetComponent<MultiplayerMovement>().onGround;
+        else if (currentJumpTime > 0) currentJumpTime -= Time.deltaTime;
         else if(Input.GetKey(jumpButton) && GetComponent<MultiplayerMovement>().onGround) 
         {
-            rb.AddForce(new Vector3(0, jumpForce, 0));
+            rb.AddForce(new Vector3(0, jumpForce * rb.mass, 0));
             currentJumpTime = jumpTimer;
         }
     }

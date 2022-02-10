@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f50cec78a6578c4bb597f393acec0e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mass: 0
 --- !u!1 &8991425119472531194
 GameObject:
   m_ObjectHideFlags: 0
@@ -81,7 +82,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0, y: 0.39999998}
-  m_SizeDelta: {x: 20, y: 5}
+  m_SizeDelta: {x: 62.85, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &8991425119472531174
 MeshRenderer:
