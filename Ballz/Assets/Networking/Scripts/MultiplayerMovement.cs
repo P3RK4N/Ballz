@@ -24,18 +24,24 @@ public class MultiplayerMovement : MonoBehaviour
     float totalForce;
     public bool onGround = false;
 
+    Vector3 startPos;
+    
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         cameraTransform = FindObjectOfType<Camera>().transform;
+        startPos = transform.parent.position;
     }
 
     // Update is called once per frame
     void Update()
     {
         move();
-
+        if(transform.parent.position.y < -1f) 
+        {
+            transform.parent.position = startPos;
+        }
         controlSpeed();
 
         if(Input.GetKey(KeyCode.R)) gameObject.transform.position = new Vector3(0,0,0);

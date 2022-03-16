@@ -148,7 +148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6047564523629087600, guid: 949a83a28f4a48145a7a91fe013f97e5, type: 3}
       propertyPath: jumpButton
-      value: 303
+      value: 305
       objectReference: {fileID: 0}
     - target: {fileID: 6047564523629087600, guid: 949a83a28f4a48145a7a91fe013f97e5, type: 3}
       propertyPath: thrustButton
