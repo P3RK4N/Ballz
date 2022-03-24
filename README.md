@@ -12,10 +12,10 @@ Procedural Bridge
 
 ![GIF](Preview/proceduralBridge.gif "Procedural Bridge")
 
-Rocky Road
+Rocky Road - procedurally generated
 
 ![GIF](Preview/RockyRoad.gif "Rocky Road")
 
-Disco Floor
+Disco Floor - procedurally generated
 
 ![GIF](Preview/DiscoFloor.gif "Disco Floor")
