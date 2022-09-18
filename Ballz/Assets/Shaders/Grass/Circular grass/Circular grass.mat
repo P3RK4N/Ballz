@@ -2,14 +2,15 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Circular grass
   m_Shader: {fileID: -6465566751694194690, guid: 0934a73ee61101444beab65154ec4e6d, type: 3}
-  m_ShaderKeywords: 
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -31,6 +32,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - Vector1_1a9746632c6b4645b38b9e234f2a5acd: 0.27
     - Vector1_2b8dd7459ab9480c943e437ee4e9ba5b: -1
@@ -46,8 +48,23 @@ Material:
     - Vector1_f77f62bcab554828a1cebdcd77c28366: 1.13
     - _DIstance: 3.03
     - _Distance: 5
+    - _QueueControl: 0
+    - _QueueOffset: 0
     m_Colors:
     - Color_35c161e4482d432cb55f7453fb4996c9: {r: 0.047659315, g: 0.5943396, b: 0.05869249, a: 0}
     - _MIDDLE: {r: 0, g: 0, b: 0, a: 0}
     - _PlayerVector: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
+--- !u!114 &5430011233675819967
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5

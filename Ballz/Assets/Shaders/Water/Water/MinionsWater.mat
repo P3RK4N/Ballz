@@ -2,14 +2,16 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MinionsWater
   m_Shader: {fileID: -6465566751694194690, guid: 380a56426f9b9e946af634ed4ccf65c2, type: 3}
-  m_ShaderKeywords: _RECEIVE_SHADOWS_OFF
+  m_ValidKeywords:
+  - _RECEIVE_SHADOWS_OFF
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -39,6 +41,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - Vector1_2E11270D: 0.03
     - Vector1_39D35881: 1
@@ -50,8 +53,23 @@ Material:
     - Vector1_C1C7D298: 0.767
     - Vector1_ECB3F2B8: 0.4
     - Vector1_e6cd40566dbc4fdbb3b6a84852ee46ec: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
     m_Colors:
     - Color_27D4D743: {r: 0, g: 0.64252937, b: 0.8490566, a: 0}
     - Color_51A4B6EC: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 0}
     - Color_C347D0B: {r: 0.013705952, g: 0.30741596, b: 0.41509432, a: 0}
   m_BuildTextureStacks: []
+--- !u!114 &6312078798686030325
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5
